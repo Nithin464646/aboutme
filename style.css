@@ -1,0 +1,2667 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+
+/* =========================================================
+   NITHIN RAJ G
+   PROFESSIONAL AI / SOFTWARE ENGINEERING PORTFOLIO
+========================================================= */
+
+
+/* =========================================================
+   1. COLOR VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #173b72;
+    --primary-light: #2563a8;
+
+    --blue: #2563eb;
+    --indigo: #4f46e5;
+    --purple: #8b5cf6;
+    --cyan: #0891b2;
+    --teal: #14b8a6;
+
+    --background: #edf2f9;
+
+    --surface: #ffffff;
+
+    --surface-soft: #f7f9fd;
+
+    --text: #172033;
+
+    --text-secondary: #46566f;
+
+    --text-muted: #6b7280;
+
+    --border: #dce4ef;
+
+    --link: #173b72;
+
+    --link-hover: #2563eb;
+
+    --flux:
+        linear-gradient(
+            90deg,
+            #173b72 0%,
+            #2563eb 25%,
+            #4f46e5 48%,
+            #8b5cf6 72%,
+            #0891b2 100%
+        );
+
+    --shadow:
+        0 12px 35px
+        rgba(23, 59, 114, 0.09);
+
+    --shadow-hover:
+        0 18px 45px
+        rgba(23, 59, 114, 0.15);
+
+    --radius: 20px;
+}
+
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   3. HTML
+========================================================= */
+
+html {
+
+    scroll-behavior: smooth;
+
+    /*
+       Important:
+       Prevents unwanted spacing when
+       clicking navigation links.
+    */
+
+    scroll-padding-top: 0;
+}
+
+
+/* =========================================================
+   4. BODY
+========================================================= */
+
+body {
+
+    min-height: 100vh;
+
+    background:
+
+        radial-gradient(
+            circle at 0% 0%,
+            rgba(37, 99, 235, 0.12),
+            transparent 24%
+        ),
+
+        radial-gradient(
+            circle at 100% 10%,
+            rgba(99, 102, 241, 0.11),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 20% 90%,
+            rgba(8, 145, 178, 0.08),
+            transparent 23%
+        ),
+
+        linear-gradient(
+            135deg,
+            #e9eff8 0%,
+            #f5f8fd 50%,
+            #e8eff8 100%
+        );
+
+    color:
+        var(--text);
+
+    font-family:
+        "Inter",
+        sans-serif;
+
+    line-height:
+        1.7;
+
+    overflow-x:
+        hidden;
+}
+
+
+/* =========================================================
+   5. TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3 {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    line-height:
+        1.25;
+
+    color:
+        var(--text);
+}
+
+
+h1 {
+
+    font-size:
+        clamp(
+            2.8rem,
+            5vw,
+            4.5rem
+        );
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -2px;
+
+    background:
+        var(--flux);
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+}
+
+
+h2 {
+
+    font-size:
+        2rem;
+
+    font-weight:
+        700;
+
+    margin-bottom:
+        28px;
+}
+
+
+h3 {
+
+    font-size:
+        1.15rem;
+
+    margin-bottom:
+        10px;
+}
+
+
+p {
+
+    color:
+        var(--text-secondary);
+
+    margin-bottom:
+        15px;
+}
+
+
+/* =========================================================
+   6. LINKS
+========================================================= */
+
+a {
+
+    color:
+        var(--link);
+
+    font-weight:
+        600;
+
+    text-decoration:
+        none;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+a:hover {
+
+    color:
+        var(--link-hover);
+
+    text-decoration:
+        underline;
+}
+
+
+a:focus {
+
+    outline:
+        3px solid
+        rgba(
+            37,
+            99,
+            168,
+            0.20
+        );
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   7. PROFILE HEADER
+========================================================= */
+
+.site-header {
+
+    width:
+        min(
+            1250px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        25px auto;
+
+    padding:
+        35px 45px 0;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        24px;
+
+    box-shadow:
+        var(--shadow);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+}
+
+
+/* =========================================================
+   8. HEADER FLUX LINE
+========================================================= */
+
+.site-header::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        5px;
+
+    background:
+        var(--flux);
+}
+
+
+/* =========================================================
+   9. HEADER DECORATIVE FLUX
+========================================================= */
+
+.site-header::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        450px;
+
+    height:
+        450px;
+
+    right:
+        -180px;
+
+    top:
+        -230px;
+
+    border-radius:
+        50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(
+                99,
+                102,
+                241,
+                0.13
+            ),
+            rgba(
+                99,
+                102,
+                241,
+                0.04
+            ) 45%,
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+}
+
+
+/* =========================================================
+   10. PROFILE IMAGE
+========================================================= */
+
+.site-header .profile-image {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        block;
+
+    width:
+        125px;
+
+    height:
+        125px;
+
+    margin:
+        5px auto 18px;
+
+    object-fit:
+        cover;
+
+    border-radius:
+        50%;
+
+    padding:
+        4px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #173b72,
+            #2563eb,
+            #6366f1,
+            #8b5cf6,
+            #0891b2
+        );
+
+    box-shadow:
+
+        0 0 0 6px
+        rgba(
+            37,
+            99,
+            235,
+            0.07
+        ),
+
+        0 12px 30px
+        rgba(
+            23,
+            59,
+            114,
+            0.18
+        );
+}
+
+
+/* =========================================================
+   11. NAME
+========================================================= */
+
+.site-header h1 {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0 0 6px;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            2.8rem
+        );
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #173b72,
+            #4f46e5,
+            #0891b2
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+}
+
+
+/* =========================================================
+   12. PROFESSIONAL ROLE
+========================================================= */
+
+.site-header > p:nth-of-type(1) {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--primary);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        1.08rem;
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   13. SPECIALIZATION
+========================================================= */
+
+.site-header > p:nth-of-type(2) {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0 0 5px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        0.92rem;
+
+    font-weight:
+        500;
+}
+
+
+/* =========================================================
+   14. CONTACT INFORMATION
+========================================================= */
+
+.site-header > p:nth-of-type(3) {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        0.85rem;
+}
+
+
+.site-header > p:nth-of-type(3) a {
+
+    color:
+        var(--link);
+
+    font-weight:
+        700;
+
+    text-decoration:
+        underline;
+
+    text-decoration-thickness:
+        1px;
+
+    text-underline-offset:
+        3px;
+}
+
+
+.site-header > p:nth-of-type(3) a:hover {
+
+    color:
+        var(--indigo);
+}
+
+
+/* =========================================================
+   15. DASHBOARD NAVIGATION
+========================================================= */
+
+.site-nav {
+
+    position:
+        relative;
+
+    z-index:
+        5;
+
+    width:
+        100%;
+
+    margin-top:
+        30px;
+
+    padding:
+        14px 18px;
+
+    /*
+       Stronger normal dashboard background.
+       This fixes the pale appearance.
+    */
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e5edff 0%,
+            #eef0ff 45%,
+            #e3f7fa 100%
+        );
+
+    border:
+        1px solid
+        #c5d3e8;
+
+    border-radius:
+        14px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        6px;
+
+    box-shadow:
+
+        0 8px 25px
+        rgba(
+            23,
+            59,
+            114,
+            0.12
+        );
+
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   16. DASHBOARD TOP FLUX
+========================================================= */
+
+.site-nav::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        3px;
+
+    border-radius:
+        14px 14px 0 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #173b72,
+            #2563eb,
+            #4f46e5,
+            #8b5cf6,
+            #0891b2,
+            #14b8a6
+        );
+}
+
+
+/* =========================================================
+   17. DASHBOARD BOTTOM FLUX
+========================================================= */
+
+.site-nav::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    bottom:
+        0;
+
+    left:
+        10%;
+
+    width:
+        80%;
+
+    height:
+        2px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            #2563eb,
+            #6366f1,
+            #8b5cf6,
+            #0891b2,
+            transparent
+        );
+
+    opacity:
+        0.7;
+}
+
+
+/* =========================================================
+   18. HIDE OPTIONAL NAV TITLE
+========================================================= */
+
+.site-nav .nav-title {
+
+    display:
+        none;
+}
+
+
+/* =========================================================
+   19. DASHBOARD LINKS
+========================================================= */
+
+.site-nav a {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        10px 16px;
+
+    border-radius:
+        9px;
+
+    /*
+       Dark enough to clearly identify links
+       even without hovering.
+    */
+
+    color:
+        #173b72;
+
+    background:
+        transparent;
+
+    font-size:
+        0.88rem;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
+
+    border:
+        1px solid
+        transparent;
+
+    transition:
+
+        background 0.25s ease,
+
+        color 0.25s ease,
+
+        transform 0.25s ease,
+
+        box-shadow 0.25s ease,
+
+        border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   20. DASHBOARD HOVER
+========================================================= */
+
+.site-nav a:hover {
+
+    color:
+        #ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #173b72,
+            #4f46e5
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+
+        0 8px 20px
+        rgba(
+            37,
+            99,
+            235,
+            0.28
+        );
+
+    text-decoration:
+        none;
+}
+
+
+/* =========================================================
+   21. ACTIVE DASHBOARD BUTTON
+========================================================= */
+
+.site-nav a.active {
+
+    color:
+        #ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #173b72,
+            #4f46e5
+        );
+
+    border-color:
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+    box-shadow:
+
+        0 7px 18px
+        rgba(
+            37,
+            99,
+            235,
+            0.22
+        );
+}
+
+
+/* =========================================================
+   22. DASHBOARD FOCUS
+========================================================= */
+
+.site-nav a:focus {
+
+    outline:
+        none;
+
+    color:
+        #ffffff;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #173b72,
+            #4f46e5
+        );
+
+    box-shadow:
+
+        0 0 0 3px
+        rgba(
+            37,
+            99,
+            235,
+            0.18
+        );
+}
+
+
+/* =========================================================
+   23. MAIN CONTENT
+========================================================= */
+
+.site-main {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        30px auto;
+
+    padding:
+        0 0 70px;
+}
+
+
+/* =========================================================
+   24. COMMON SECTION
+========================================================= */
+
+.content-section {
+
+    position:
+        relative;
+
+    border:
+        1px solid
+        rgba(
+            180,
+            195,
+            220,
+            0.75
+        );
+
+    border-radius:
+        20px;
+
+    padding:
+        55px;
+
+    margin:
+        30px auto;
+
+    overflow:
+        hidden;
+
+    /*
+       Important:
+       This removes the large blank space
+       when clicking navigation links.
+    */
+
+    scroll-margin-top:
+        0;
+
+    box-shadow:
+
+        0 12px 35px
+        rgba(
+            23,
+            59,
+            114,
+            0.08
+        );
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease,
+
+        border-color 0.3s ease;
+}
+
+
+/* =========================================================
+   25. ABOUT BACKGROUND
+========================================================= */
+
+#about {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(
+                99,
+                102,
+                241,
+                0.16
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(
+                37,
+                99,
+                235,
+                0.08
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f5f8ff 0%,
+            #eef3ff 50%,
+            #f7f5ff 100%
+        );
+
+    border-color:
+        #d5def2;
+}
+
+
+/* =========================================================
+   26. SKILLS BACKGROUND
+========================================================= */
+
+#skills {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                8,
+                145,
+                178,
+                0.15
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                20,
+                184,
+                166,
+                0.08
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f1f8ff 0%,
+            #effbfc 55%,
+            #f1faf8 100%
+        );
+
+    border-color:
+        #cfe5e8;
+}
+
+
+/* =========================================================
+   27. EXPERIENCE BACKGROUND
+========================================================= */
+
+#experience {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                139,
+                92,
+                246,
+                0.15
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                99,
+                102,
+                241,
+                0.08
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f7f4ff 0%,
+            #f3f1ff 55%,
+            #faf7ff 100%
+        );
+
+    border-color:
+        #ded5f2;
+}
+
+
+/* =========================================================
+   28. EDUCATION BACKGROUND
+========================================================= */
+
+#education {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                37,
+                99,
+                235,
+                0.14
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                23,
+                59,
+                114,
+                0.07
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f1f6ff 0%,
+            #edf4ff 55%,
+            #f6f9ff 100%
+        );
+
+    border-color:
+        #d2def1;
+}
+
+
+/* =========================================================
+   29. PROJECTS BACKGROUND
+========================================================= */
+
+#projects {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                139,
+                92,
+                246,
+                0.15
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                37,
+                99,
+                235,
+                0.08
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f6f3ff 0%,
+            #f1f3ff 50%,
+            #f4f8ff 100%
+        );
+
+    border-color:
+        #dcd9ef;
+}
+
+
+/* =========================================================
+   30. CERTIFICATIONS BACKGROUND
+========================================================= */
+
+#certifications {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                20,
+                184,
+                166,
+                0.14
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                8,
+                145,
+                178,
+                0.07
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f0fbfa 0%,
+            #effafc 55%,
+            #f4fbfa 100%
+        );
+
+    border-color:
+        #cfe5e2;
+}
+
+
+/* =========================================================
+   31. INTERESTS BACKGROUND
+========================================================= */
+
+#interests {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                99,
+                102,
+                241,
+                0.14
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                139,
+                92,
+                246,
+                0.07
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f4f5ff 0%,
+            #f5f1ff 55%,
+            #f9f6ff 100%
+        );
+
+    border-color:
+        #dcd9f0;
+}
+
+
+/* =========================================================
+   32. LANGUAGES BACKGROUND
+========================================================= */
+
+#languages {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                20,
+                184,
+                166,
+                0.14
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                8,
+                145,
+                178,
+                0.07
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f0fbf8 0%,
+            #effafa 55%,
+            #f4fcfb 100%
+        );
+
+    border-color:
+        #d0e8e2;
+}
+
+
+/* =========================================================
+   33. CONTACT BACKGROUND
+========================================================= */
+
+#contact {
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(
+                8,
+                145,
+                178,
+                0.14
+            ),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 5% 90%,
+            rgba(
+                37,
+                99,
+                235,
+                0.08
+            ),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #f1f7ff 0%,
+            #eef9fb 55%,
+            #f5faff 100%
+        );
+
+    border-color:
+        #d1e1ec;
+}
+
+
+/* =========================================================
+   34. SECTION FLUX TOP BORDER
+========================================================= */
+
+.content-section::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        0;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    height:
+        4px;
+}
+
+
+/* ABOUT */
+
+#about::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #173b72,
+            #2563eb,
+            #6366f1
+        );
+}
+
+
+/* SKILLS */
+
+#skills::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #0891b2,
+            #14b8a6
+        );
+}
+
+
+/* EXPERIENCE */
+
+#experience::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #8b5cf6,
+            #a855f7
+        );
+}
+
+
+/* EDUCATION */
+
+#education::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #173b72,
+            #2563eb,
+            #0891b2
+        );
+}
+
+
+/* PROJECTS */
+
+#projects::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #6366f1,
+            #2563eb
+        );
+}
+
+
+/* CERTIFICATIONS */
+
+#certifications::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #14b8a6,
+            #0891b2,
+            #2563eb
+        );
+}
+
+
+/* INTERESTS */
+
+#interests::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #6366f1,
+            #8b5cf6
+        );
+}
+
+
+/* LANGUAGES */
+
+#languages::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #14b8a6,
+            #0891b2,
+            #2563eb
+        );
+}
+
+
+/* CONTACT */
+
+#contact::before {
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #173b72,
+            #0891b2,
+            #14b8a6
+        );
+}
+
+
+/* =========================================================
+   35. SECTION HEADINGS
+========================================================= */
+
+.content-section > h2 {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    color:
+        var(--primary);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size:
+        1.8rem;
+
+    margin-bottom:
+        25px;
+}
+
+
+.content-section > h2::before {
+
+    content:
+        "";
+
+    width:
+        6px;
+
+    height:
+        28px;
+
+    border-radius:
+        10px;
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #2563eb,
+            #6366f1,
+            #0891b2
+        );
+}
+
+
+/* =========================================================
+   36. ABOUT TEXT
+========================================================= */
+
+#about p {
+
+    max-width:
+        900px;
+
+    font-size:
+        1.02rem;
+
+    color:
+        #3f5875;
+}
+
+
+/* =========================================================
+   37. SKILL BADGES
+========================================================= */
+
+#skills ul {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    list-style:
+        none;
+
+    padding:
+        0;
+
+    margin-bottom:
+        25px;
+}
+
+
+#skills h3 {
+
+    margin-top:
+        25px;
+
+    color:
+        var(--primary);
+}
+
+
+#skills li {
+
+    padding:
+        10px 17px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.95
+            ),
+            rgba(
+                238,
+                247,
+                255,
+                0.95
+            )
+        );
+
+    border:
+        1px solid
+        #cddceb;
+
+    border-radius:
+        100px;
+
+    color:
+        #173b72;
+
+    font-size:
+        0.85rem;
+
+    font-weight:
+        600;
+
+    box-shadow:
+
+        0 3px 10px
+        rgba(
+            37,
+            99,
+            235,
+            0.05
+        );
+
+    transition:
+        all 0.25s ease;
+}
+
+
+#skills li:hover {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #eefbfc
+        );
+
+    border-color:
+        #7aa7d9;
+
+    color:
+        #173b72;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 7px 18px
+        rgba(
+            37,
+            99,
+            235,
+            0.12
+        );
+}
+
+
+/* =========================================================
+   38. PROJECT / EXPERIENCE CARDS
+========================================================= */
+
+.project-card {
+
+    position:
+        relative;
+
+    padding:
+        28px;
+
+    margin-bottom:
+        20px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.82
+        );
+
+    border:
+        1px solid
+        rgba(
+            203,
+            213,
+            225,
+            0.85
+        );
+
+    border-radius:
+        14px;
+
+    box-shadow:
+
+        0 5px 20px
+        rgba(
+            23,
+            59,
+            114,
+            0.05
+        );
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.project-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        var(--shadow-hover);
+
+    border-color:
+        #b9c7dc;
+}
+
+
+.project-card h3 {
+
+    color:
+        var(--primary);
+
+    font-size:
+        1.3rem;
+}
+
+
+.project-card strong {
+
+    color:
+        var(--primary);
+}
+
+
+#experience .project-card {
+
+    border-left:
+        4px solid
+        var(--purple);
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.92
+            ),
+            rgba(
+                242,
+                247,
+                255,
+                0.95
+            )
+        );
+}
+
+
+/* =========================================================
+   39. CERTIFICATIONS
+========================================================= */
+
+#certifications ul {
+
+    list-style:
+        none;
+
+    padding:
+        0;
+}
+
+
+#certifications li {
+
+    padding:
+        16px 20px;
+
+    margin-bottom:
+        10px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.78
+        );
+
+    border:
+        1px solid
+        #cfe5e2;
+
+    border-radius:
+        10px;
+
+    color:
+        var(--text-secondary);
+
+    transition:
+        all 0.2s ease;
+}
+
+
+#certifications li:hover {
+
+    transform:
+        translateX(5px);
+
+    border-color:
+        #8bcfc4;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.95
+        );
+}
+
+
+/* =========================================================
+   40. INTERESTS
+========================================================= */
+
+#interests ul {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    list-style:
+        none;
+
+    padding:
+        0;
+}
+
+
+#interests li {
+
+    padding:
+        10px 18px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f4efff
+        );
+
+    border:
+        1px solid
+        #d6d5f1;
+
+    border-radius:
+        100px;
+
+    color:
+        var(--primary);
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   41. LANGUAGES
+========================================================= */
+
+#languages ul {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        12px;
+
+    list-style:
+        none;
+
+    padding:
+        0;
+}
+
+
+#languages li {
+
+    padding:
+        10px 18px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ecfaf7,
+            #eefafd
+        );
+
+    border:
+        1px solid
+        #cce7e1;
+
+    border-radius:
+        100px;
+
+    color:
+        #0f766e;
+
+    font-weight:
+        600;
+}
+
+
+/* =========================================================
+   42. CONTACT
+========================================================= */
+
+#contact > ul {
+
+    list-style:
+        none;
+
+    padding:
+        0;
+
+    display:
+        grid;
+
+    gap:
+        10px;
+
+    margin-bottom:
+        30px;
+}
+
+
+#contact > ul li {
+
+    padding:
+        13px 16px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.80
+        );
+
+    border:
+        1px solid
+        #d1e1ec;
+
+    border-radius:
+        9px;
+}
+
+
+#contact a {
+
+    color:
+        #173b72;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        underline;
+
+    text-decoration-thickness:
+        1px;
+
+    text-underline-offset:
+        3px;
+}
+
+
+#contact a:hover {
+
+    color:
+        var(--indigo);
+}
+
+
+/* =========================================================
+   43. CONTACT FORM
+========================================================= */
+
+.contact-form {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        16px;
+
+    max-width:
+        720px;
+}
+
+
+.contact-form > div {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        6px;
+}
+
+
+.contact-form br {
+
+    display:
+        none;
+}
+
+
+.contact-form label {
+
+    font-size:
+        0.85rem;
+
+    font-weight:
+        700;
+
+    color:
+        #263852;
+}
+
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+
+    width:
+        100%;
+
+    padding:
+        13px 15px;
+
+    font:
+        inherit;
+
+    color:
+        var(--text);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    border:
+        1px solid
+        #d6dce6;
+
+    border-radius:
+        9px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+
+    color:
+        #9aa3b2;
+}
+
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+
+    outline:
+        none;
+
+    border-color:
+        var(--primary-light);
+
+    box-shadow:
+
+        0 0 0 3px
+        rgba(
+            37,
+            99,
+            168,
+            0.10
+        );
+}
+
+
+.contact-form textarea {
+
+    min-height:
+        150px;
+
+    resize:
+        vertical;
+}
+
+
+/* =========================================================
+   44. CONTACT BUTTON
+========================================================= */
+
+.contact-form button {
+
+    align-self:
+        flex-start;
+
+    padding:
+        12px 24px;
+
+    border:
+        none;
+
+    border-radius:
+        9px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #173b72,
+            #4f46e5
+        );
+
+    color:
+        #ffffff;
+
+    font:
+        inherit;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+
+        0 8px 20px
+        rgba(
+            23,
+            59,
+            114,
+            0.18
+        );
+
+    transition:
+        all 0.2s ease;
+}
+
+
+.contact-form button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+
+        0 12px 28px
+        rgba(
+            23,
+            59,
+            114,
+            0.25
+        );
+}
+
+
+/* =========================================================
+   45. FOOTER
+========================================================= */
+
+.site-footer {
+
+    width:
+        min(
+            1180px,
+            calc(100% - 40px)
+        );
+
+    margin:
+        0 auto 30px;
+
+    padding:
+        25px 35px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        14px;
+
+    box-shadow:
+        var(--shadow);
+}
+
+
+.site-footer p {
+
+    margin:
+        0;
+
+    color:
+        var(--text-muted);
+}
+
+
+.site-footer a {
+
+    color:
+        var(--primary);
+
+    font-weight:
+        700;
+}
+
+
+/* =========================================================
+   46. SECTION HOVER
+========================================================= */
+
+.content-section:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(
+            23,
+            59,
+            114,
+            0.12
+        );
+}
+
+
+/* =========================================================
+   47. TEXT SELECTION
+========================================================= */
+
+::selection {
+
+    background:
+        #c7d2fe;
+
+    color:
+        #172033;
+}
+
+
+/* =========================================================
+   48. NAVIGATION SCROLL FIX
+========================================================= */
+
+#about,
+#skills,
+#experience,
+#education,
+#projects,
+#certifications,
+#interests,
+#languages,
+#contact {
+
+    scroll-margin-top:
+        0;
+}
+
+
+/* =========================================================
+   49. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+
+        width:
+            calc(100% - 30px);
+
+        margin:
+            15px auto;
+
+        padding:
+            30px 25px 0;
+    }
+
+
+    .site-header h1 {
+
+        font-size:
+            2rem;
+    }
+
+
+    .site-nav {
+
+        gap:
+            4px;
+    }
+
+
+    .site-nav a {
+
+        padding:
+            8px 11px;
+
+        font-size:
+            0.82rem;
+    }
+
+
+    .content-section {
+
+        padding:
+            40px;
+    }
+}
+
+
+/* =========================================================
+   50. MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+
+        width:
+            calc(100% - 20px);
+
+        margin:
+            10px auto;
+
+        padding:
+            28px 18px 0;
+
+        border-radius:
+            20px;
+    }
+
+
+    .site-header .profile-image {
+
+        width:
+            100px;
+
+        height:
+            100px;
+    }
+
+
+    .site-header h1 {
+
+        font-size:
+            1.8rem;
+
+        letter-spacing:
+            -0.8px;
+    }
+
+
+    .site-header > p:nth-of-type(1) {
+
+        font-size:
+            0.92rem;
+    }
+
+
+    .site-header > p:nth-of-type(2) {
+
+        font-size:
+            0.78rem;
+    }
+
+
+    .site-header > p:nth-of-type(3) {
+
+        font-size:
+            0.75rem;
+    }
+
+
+    .site-nav {
+
+        margin-top:
+            22px;
+
+        padding:
+            12px 5px;
+
+        gap:
+            3px;
+
+        border-radius:
+            12px;
+    }
+
+
+    .site-nav a {
+
+        padding:
+            7px 9px;
+
+        font-size:
+            0.73rem;
+    }
+
+
+    .site-main {
+
+        width:
+            calc(100% - 20px);
+
+        margin:
+            20px auto;
+
+        padding:
+            0 0 40px;
+    }
+
+
+    .content-section {
+
+        padding:
+            30px 22px;
+
+        margin:
+            20px auto;
+
+        border-radius:
+            16px;
+
+        scroll-margin-top:
+            0;
+    }
+
+
+    .content-section > h2 {
+
+        font-size:
+            1.55rem;
+    }
+
+
+    #about p {
+
+        font-size:
+            0.92rem;
+    }
+
+
+    #skills li {
+
+        font-size:
+            0.78rem;
+
+        padding:
+            8px 13px;
+    }
+
+
+    .project-card {
+
+        padding:
+            22px;
+    }
+
+
+    .site-footer {
+
+        width:
+            calc(100% - 20px);
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+        padding:
+            20px;
+    }
+}
+
+
+/* =========================================================
+   END OF STYLE.CSS
+========================================================= */
